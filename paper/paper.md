@@ -9,14 +9,15 @@ authors:
   - name: Gabriel Schneider
     orcid: 0000-0001-6573-3115
     affiliation: 1
-  - name: Patrick
+  - name: Patrick König
+    orcid: 0000-0002-8948-6793
     affiliation: 3
-  - name: Cyril
+  - name: Cyril Pommier
     affiliation: 2
-  - name: Carissa BLeker
+  - name: Carissa Bleker
     orcid: 0000-0003-1617-7145
     affiliation: 4    
-  - name: Pedro M Barros
+  - name: Pedro M. Barros
     orcid: 0000-0001-5626-0619
     affiliation: 5 
   - name: Filippo Bergeretti
@@ -25,9 +26,6 @@ authors:
   - name: Ana Usié
     orcid: 0000-0002-3364-9434
     affiliation: 6
-  - name: Further Author (PLEASE INSERT YOURSELF)
-    orcid: 0000-0000-0000-0000
-    affiliation: 
   - name: Daniel Arend
     affiliation: 3
     orcid: 0000-0002-2455-5938
@@ -83,10 +81,10 @@ authors_short: First Author \emph{et al.}
 
 # Introduction
 
-As part of the de.NBI BioHackathon 2023, we here report about our progress on increasing FAIR-compliance in agrosystem sciences and plant phenomics.
+As part of the de.NBI BioHackathon 2023, we here report about our progress on increasing FAIR-compliance in agrosystem sciences and plant phenomics. Through the collaborative efforts of the agrosystem and plant sciences communities, research data are available through various data repositories and infrastructures. To foster these developments and increase the value for the communities, enabling FAIR-compliance for scientific datasets is one top priority strategic aim. Due to the heterogeneity of the sub-domains and their requirements, we addressed three challenges with direct relation to specific FAIR principles: Increasing findability of digital agrosystem resources by extending Schema.org, Enabling easy creation of MIAPPE-compliant ISA metadata for Plant Phenotyping Experiments, and Increasing Plant Data Accessibility and Collaboration with FAIDARE. 
 
 
-## Subproject 1:<br>Increasing findability of digital agrosystem resources by extending Schema.org
+## Increasing findability of digital agrosystem resources by extending Schema.org
 ### Introduction
 Research Data Infrastructures (RDIs) in the agrosystem domain established services and published research data of their communities for years. Each infrastructure is tailored to its users needs, also concerning its metadata, leading to a very heterogeneous landscape. To increase the findability of their content via search engines, RDIs can expose the metadata of resources as markup via Schema.org. 
 In the context of [FAIRagro](https://fairagro.net/), the German National Research Data Infrastructure for the agrosystem domain, several RDIs already do so: For each landing page of a dataset, a [JSON-LD](https://json-ld.org/) based resource is created, that contains part of the metadata information, using Schema.org types and properties. This annotation is then consumed by search engines to present enriched search results to users. As Schema.org follows a generic approach, its core schema doesn't suffice in describing all entities relevant for agrosystem researchers with the required level of detail.
@@ -158,58 +156,54 @@ To evaluate on which entities are most relevant and how best to model them, a re
 
 Further results and material can be found in the subprojects Github repository, created during the hackathon: https://github.com/fairagro/biohackathon2023.
 
-## Subproject 2:<br>MIAPPE Wizard - Enabling easy creation of MIAPPE-compliant ISA metadata for Plant Phenotyping Experiments
-
-Section with description about and aims of the MIAPPE-Wizard.
+## MIAPPE Wizard - Enabling easy creation of MIAPPE-compliant ISA metadata for Plant Phenotyping Experiments
 
 ### Introduction
 
-Development of the MIAPPE Wizard began with the first Biohackathon Germany in 2022 [@citeAsRelated:https://doi.org/10.37044/osf.io/ekhdw]. 
+The MIAPPE Wizard is a tool that should make MIAPPE-compliant metadata annotation of plant phenotyping experiments as easy as possible. It should hide the complexity of the ISA framework, ontology selection and annotation and mapping of attributes of the MIAPPE checklist to ISA entities for non-expert users.
+The development of the MIAPPE Wizard began with the first Biohackathon Germany in 2022 [@citeAsRelated:denbi_biohack_2022].
 
 ### Results
 
-The focus of this year's hackathon was to enhance and extend the features available in the MIAPPE Wizard. Previously, the Wizard was only capable of creating ISA JSON and ISA Tab formatted archives, with a significant amount of MIAPPE specific metadata missing. This year, the group focused on implementing the MIAPPE checklist and data model, as well as protocol and material/sample management. 
+The focus at this year's de.NBI BioHackathon was to enhance and extend the features available in the MIAPPE Wizard. Previously, the Wizard was only capable of creating ISA JSON and ISA Tab formatted archives, with a significant amount of MIAPPE specific metadata missing. This year, the group focused on implementing a) the MIAPPE checklist b) the management of protocols and c) the upload of material and sample sheets. 
 
-In addition to supporting ISA Tab and ISA JSON, the MIAPPE Wizard was also enhanced to create ARCs. The ARC can be downloaded as a zip archive and transferred from the local machine to the DataHUB through `git`. Currently, direct transfer of the ARC into a DataHUB instance is still in development.
+In addition to supporting ISA Tab and ISA JSON, the MIAPPE Wizard was also enhanced to create "Annotated Research Contexts" (ARC) by using the [ARCtrl Javascript library](https://github.com/nfdi4plants/ARCtrl) provided by the NFDI DataPLANT consortium. The ARC can be downloaded as a zip archive and transferred from the local machine to PLANTdataHUB through `git` [@citeAsRelated:plantdatahub]. The direct transfer of ARC archives to a PLANTdataHUB instance is still in development.
 
-To guide the development, an example dataset was taken, formatted in ISA Tab, and transformed into the ARC structure. The dataset has a similar structure to datasets in the BreedFides project, where the MIAPPE Wizard will be used as part of the dataset registration process. 
-
-The MIAPPE Wizard user interface was improved by adding a progress bar and updating the color scheme and logo.
+The graphical user interface was improved by adding a progress bar and updating the color scheme and logo.
 
 ### Discussion
 
+The integration of ontology terms, which is a challenging task, is still missing and a task for future activities.
 
-## Subproject 3:<br>FAIDARE: Increasing Plant Data Accessibility and Collaboration through Integration, Usability and Community Engagement
+## FAIDARE: Increasing Plant Data Accessibility and Collaboration through Integration, Usability and Community Engagement
 
-FAIDARE (https://urgi.versailles.inra.fr/faidare) is a comprehensive search portal harvesting diverse plant-centric data resources and providing a central access point for the plant research community. It addresses the findability aspect of the FAIR principles and is hosted and maintained by ELIXIR France and established as the European Search Portal for plant related datasets, in collaboration with EMPHASIS. For increasing the usability for the data users the aim of this subproject was connecting additional established resources used by the plant research community, specifically e!DAL-PGP (de.NBI/ELIXIR Germany)[@citesAsAuthority:Arend2020], CorkoakDB (ELIXIR Portugal)[@citesAsAuthority:Arias-Baldrich2020] and the Stress Knowledge Map (ELIXIR Slovenia)[@citesAsAuthority:Bleker2023] were the main targets of the project. 
+### Introduction
+
+FAIDARE (https://urgi.versailles.inra.fr/faidare) is a comprehensive search portal harvesting diverse plant-centric data resources and providing a central access point for the plant research community. It addresses the findability aspect of the FAIR principles and is hosted and maintained by ELIXIR France and established as the European Search Portal for plant related datasets, in collaboration with EMPHASIS. For increasing the usability for the data users the aim of this subproject was connecting additional established resources used by the plant research community, specifically e!DAL-PGP (de.NBI/ELIXIR Germany)[@citesAsAuthority:Arend2020], CorkOakDB (ELIXIR Portugal)[@citesAsAuthority:Arias-Baldrich2020] and the Stress Knowledge Map (ELIXIR Slovenia)[@citesAsAuthority:Bleker2023] were the main targets of the project. 
 <!-- 
 To achieve this goal, we will use the common schema.org/BioSchemas markup to harvest and index these resources. In addition to these two major infrastructures, we will highly motivate additional resource providers to join us, and assess how this integration can be implemented to add their own system to the federated search portal of FAIDARE. To lower the barrier for connecting new data repositories, we also plan on generating training materials and ‘how-to’ guides to facilitate the future integration of additional data repositories. This will help to encourage the growth and expansion of FAIDARE as a comprehensive search portal for plant data and support capacity building for further resource providers. Therefore we are also looking for people who can support us in creating these materials and have knowledge on how to share and present it in a user appealing and helpful manner. This will enable researchers to access a wider range of plant data in a more efficient way and lead to greater collaboration and innovation within the field. Our vision is to create a comprehensive and user-friendly platform that serves as a one-stop-shop for all plant data needs.
 -->
 
-### CorkOakDB
+### Implementation
+
+#### CorkOakDB
 [CorkOakDB](https://corkoakdb.org/) is a web-based resource to access the draft genome sequence of cork oak (*Quercus suber*). It provides public access to a set of standard tools for data visualization and retrieval, including gene sequences, structural and functional annotation, as well as gene expression based on available datasets. 
 
 In this project we have developed a method to access CorkOakDB through the existing web service and retrieve functional information of all cork oak gene entries, together with corresponding links. All this information was compiled in a structured JSON file, with the required metadata, following [FAIDARE](https://urgi.versailles.inra.fr/faidare/join) specifications. The scripts prepared for this purpose and additional documentation were deposited on [github](https://github.com/anausie/FAIDARECorkOakDB). The JSON file was then uploaded to [FAIRDOM SEEK](https://seek4science.org/), for efficient access by FAIDARE. 
 
-### Stress Knowledge Map
+#### Stress Knowledge Map
 Stress Knowledge Map ([SKM](https://skm.nib.si)) is a publicly available resource containing two knowledge graphs describing current knowledge of biochemical, signalling, and regulatory molecular interactions in plants: a highly curated model of plant stress signalling (PSS, 1,425 entities and 543 reactions) and a large comprehensive knowledge network (CKN, 26,234 entities and 488,390 interactions). Both were constructed by domain experts through systematic curation of diverse literature and database resources. The main features include content exploration and visualisation, access to various export formats, and the ability to contribute improvements based on novel biological knowledge. 
 
-Prior to the hackathon, only PSS was indexed in FAIDARE (a total of 686 genes). During the project, indexing of PSS was improved, updating the number of genes to 750 and providing more contextual information. CKN was newly indexed, also on the gene level. This resulted in SKM providing a total of 14,045 entries in FAIDARE. To provide more compelling gene entry pages in SKM, PSS entries in FAIDARE are now directed to the interactive [PSS Explorer](https://skm.nib.si/biomine/), and to make the same possible for CKN, SKM was extended during the project by adding a gene identifier URL parameter to the interactive [CKN Explorer](https://skm.nib.si/ckn/). 
+Prior to the hackathon, only PSS was indexed in FAIDARE (a total of 686 genes). During the project, indexing of PSS was improved, updating the number of genes to 750 and providing more contextual information. CKN was newly indexed, also on the gene level. This resulted in SKM providing a total of 14,045 entries in FAIDARE. To provide more compelling gene entry pages in SKM, PSS entries in FAIDARE are now directed to the interactive [PSS Explorer](https://skm.nib.si/biomine/). To make the same possible for CKN, SKM was extended during the project by adding a gene identifier URL parameter to the interactive [CKN Explorer](https://skm.nib.si/ckn/). To further aid FAIDARE users in searching for genes of interest, both also contain [GoMapMan](https://gomapman.nib.si) annotations and definitions per gene, that can be used to filter the results in FAIDARE. 
 
-As a result of this project, SKM now provides two endpoints (one for each knowledge graph) providing gene level metadata in JSON format, reproduced at every knowledge graph update, for harvest by FAIDARE. To further aid FAIDARE users in searching for genes of interest, both JSON files also contain [GoMapMan](https://gomapman.nib.si) annotations and definitions per gene, that can be used to filter the results in FAIDARE. 
+As a result of this project, SKM now provides two endpoints for harvest by FAIDARE (one for each knowledge graph, https://skm.nib.si/downloads/pss/public/faidare and https://skm.nib.si/downloads/ckn/faidare). Each provides gene level metadata in JSON format, reproduced at every knowledge graph update. 
 
-### e!DAL-PGP
+#### e!DAL-PGP
 The e!DAL-PGP (Plant Genomics and Phenomics Research Data Repository) is an infrastructure to comprehensively publish plant research data. This covers in particular cross-domain datasets that are not being published in central repositories because of its volume or unsupported data scope, like image collections from plant phenotyping and microscopy, unfinished genomes, genotyping data, visualizations of morphological plant models, data from mass spectrometry as well as software and documents. All published datasets are accessible via a DOI linking to a dedicated content page, which embeds a schema.org and BioSchema markup in the HTML code.
 
 In frame of this project the existing web server of e!DAL-PGP was extended to provide an additional endpoint which delivers dynamically a JSON dump of published datasets in a compatible format. This allows FAIdare to harvest all datasets on demand and add them to the internal search index. The endpoint is accessible at https://doi.ipk-gatersleben.de/faidare.json.
 
-
-### Results
-
-
-# JUST CODE EXAMPLES -->remove later
-
-
+<!--
 ## Tables and figures
 
 Tables can be added in the following way, though alternatives are possible:
@@ -225,13 +219,6 @@ given before the table itself.
 A figure is added with:
 
 ![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
-
-# Other main section on your manuscript level 1
-
-Lists can be added with:
-
-1. Item 1
-2. Item 2
 
 # Citation Typing Ontology annotation
 
@@ -265,17 +252,10 @@ Possible CiTO typing annotation include:
 * disagreesWith
 * updates
 * citation: generic citation
-
-
-# Results
-
-
-# Discussion
-
-...
+-->
 
 ## Acknowledgements
 
-This work was performed during the de.NBI BioHackathon Germany 2023 organized by ELIXIR Germany in December 2023. This work was funded by ELIXIR, the research infrastructure for life-science data; by the Federal Government of Germany and the county of North Rhine-Westphalia (de.NBI - the German Network for Bioinformatics Infrastructure); and the DFG in frame of the FAIRagro (www.fairagro.net, project number 501899475), NFDI4BioDiversity (www.nfdi4biodiversity.org, project number 442032008) and DataPLANT (https://www.nfdi4plants.de/, project number 442077441) consortia of the NFDI;  the Slovenian Research and Innovation Agency, project number Z4-50146
+This work was performed during the de.NBI BioHackathon Germany 2023 organized by ELIXIR Germany in December 2023. This work was funded by ELIXIR, the research infrastructure for life-science data; by the Federal Government of Germany and the county of North Rhine-Westphalia (de.NBI - the German Network for Bioinformatics Infrastructure); and the DFG in frame of the FAIRagro (www.fairagro.net, project number 501899475), NFDI4BioDiversity (www.nfdi4biodiversity.org, project number 442032008) and DataPLANT (https://www.nfdi4plants.de/, project number 442077441); consortia of the NFDI; and the Slovenian Research and Innovation Agency (https://projects.nib.si/translate/, project number Z4-50146). 
 
 ## References
