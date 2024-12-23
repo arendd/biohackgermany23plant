@@ -13,7 +13,8 @@ authors:
     orcid: 0000-0002-8948-6793
     affiliation: 3
   - name: Cyril Pommier
-    affiliation: 2
+    orcid: 0000-0002-9040-8733
+    affiliation: 2,11
   - name: Carissa Bleker
     orcid: 0000-0003-1617-7145
     affiliation: 4    
@@ -25,45 +26,47 @@ authors:
     affiliation: 5 
   - name: Ana Usié
     orcid: 0000-0002-3364-9434
-    affiliation: 6
+    affiliation: 6,7
   - name: Daniel Arend
     affiliation: 3
     orcid: 0000-0002-2455-5938
   - name: Marco Brandizi
     orcid: 0000-0002-5427-2496
-    affiliation: 7
+    affiliation: 8
   - name: Daniel Martini
     orcid: 0000-0002-6953-4524
-    affiliaton: 8
+    affiliaton: 9
   - name: Jonas Grieb
     orcid: 0000-0002-8876-1722
-    affiliaton: 9
+    affiliaton: 10
   - name: Nils Reinosch
-    affiliaton: 8
+    affiliaton: 9
   - name: Jascha Jung
-    affiliation: 8
+    affiliation: 9
     
-    
-
 affiliations:
   - name: ZB MED - Information Centre for Life Sciences
     index: 1
-  - name: Second Affiliation
+  - name: Université Paris-Saclay, INRAE, URGI, Versailles, France
     index: 2
   - name: Leibniz Institute for Plant Genetics and Crop Plant Research (IPK) Gatersleben, Germany
     index: 3
-  - name: National Institute of Biology, Večna pot 121, 1000 Ljubljana, Slovenia
+  - name: Department of Biotechnology and Systems Biology, National Institute of Biology, Ljubljana, Slovenia #Večna pot 121, 1000 
     index: 4    
   - name: Instituto de Tecnologia Química e Biológica António Xavier, Universidade Nova de Lisboa  (ITQB NOVA), Oeiras, Portugal
     index: 5
   - name: Centro de Biotecnologia Agrícola e Agro-alimentar do Alentejo (CEBAL), Beja, Portugal
     index: 6
-  - name: Rothamstead Research
+  - name: MED–Instituto Mediterrâneo para a Agricultura, Ambiente e Desenvolvimento & CHANGE–Global Change and Sustainability Institute, Évora, Portugal
     index: 7
-  - name: Kuratorium für Technik und Bauwesen in der Landwirtschaft e.V. (KTBL)
+  - name: Rothamstead Research
     index: 8
-  - name: Senckenberg Society for Nature Research
+  - name: Kuratorium für Technik und Bauwesen in der Landwirtschaft e.V. (KTBL)
     index: 9
+  - name: Senckenberg Society for Nature Research
+    index: 10
+  - name: Université Paris-Saclay, INRAE, BioinfOmics, Plant Bioinformatics Facility, Versailles, France
+    index: 11
 date: 18 december 2023
 cito-bibliography: paper.bib
 event: BH23DE
@@ -199,7 +202,7 @@ Prior to the hackathon, only PSS was indexed in FAIDARE (a total of 686 genes). 
 As a result of this project, SKM now provides two endpoints for harvest by FAIDARE (one for each knowledge graph, https://skm.nib.si/downloads/pss/public/faidare and https://skm.nib.si/downloads/ckn/faidare). Each provides gene level metadata in JSON format, reproduced at every knowledge graph update. 
 
 #### e!DAL-PGP
-The e!DAL-PGP (Plant Genomics and Phenomics Research Data Repository) is an infrastructure to comprehensively publish plant research data. This covers in particular cross-domain datasets that are not being published in central repositories because of its volume or unsupported data scope, like image collections from plant phenotyping and microscopy, unfinished genomes, genotyping data, visualizations of morphological plant models, data from mass spectrometry as well as software and documents. All published datasets are accessible via a DOI linking to a dedicated content page, which embeds a schema.org and BioSchema markup in the HTML code.
+The e!DAL-PGP (Plant Genomics and Phenomics Research Data Repository) is an infrastructure to comprehensively publish plant research data [@citesAsAuthority:Arend_2016]. This covers in particular cross-domain datasets that are not being published in central repositories because of its volume or unsupported data scope, like image collections from plant phenotyping and microscopy, unfinished genomes, genotyping data, visualizations of morphological plant models, data from mass spectrometry as well as software and documents. All published datasets are accessible via a DOI linking to a dedicated content page, which embeds a schema.org and BioSchema markup in the HTML code.
 
 In frame of this project the existing web server of e!DAL-PGP was extended to provide an additional endpoint which delivers dynamically a JSON dump of published datasets in a compatible format. This allows FAIdare to harvest all datasets on demand and add them to the internal search index. The endpoint is accessible at https://doi.ipk-gatersleben.de/faidare.json.
 
@@ -256,6 +259,6 @@ Possible CiTO typing annotation include:
 
 ## Acknowledgements
 
-This work was performed during the de.NBI BioHackathon Germany 2023 organized by ELIXIR Germany in December 2023. This work was funded by ELIXIR, the research infrastructure for life-science data; by the Federal Government of Germany and the county of North Rhine-Westphalia (de.NBI - the German Network for Bioinformatics Infrastructure); and the DFG in frame of the FAIRagro (www.fairagro.net, project number 501899475), NFDI4BioDiversity (www.nfdi4biodiversity.org, project number 442032008) and DataPLANT (https://www.nfdi4plants.de/, project number 442077441); consortia of the NFDI; and the Slovenian Research and Innovation Agency (https://projects.nib.si/translate/, project number Z4-50146). 
+This work was performed during the de.NBI BioHackathon Germany 2023 organized by ELIXIR Germany in December 2023. This work was funded by ELIXIR, the research infrastructure for life-science data; by the Federal Government of Germany and the county of North Rhine-Westphalia (de.NBI - the German Network for Bioinformatics Infrastructure); by the DFG in frame of the FAIRagro (www.fairagro.net, project number 501899475), NFDI4BioDiversity (www.nfdi4biodiversity.org, project number 442032008) and DataPLANT (https://www.nfdi4plants.de/, project number 442077441); consortia of the NFDI; by the Slovenian Research and Innovation Agency (https://projects.nib.si/translate/, project number Z4-50146); and by Fundação para a Ciência e a Tecnologia (Portugal) through the R&D Unit "GREEN-IT - Bioresources for Sustainability" (DOI: 10.54499/UIDB/04551/2020 and DOI: 10.54499/UIDP/04551/2020) and LS4FUTURE Associated Laboratory (DOI: 10.54499/LA/P/0087/2020). 
 
 ## References
