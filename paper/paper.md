@@ -9,40 +9,53 @@ authors:
   - name: Gabriel Schneider
     orcid: 0000-0001-6573-3115
     affiliation: 1
+    role: Writing – original draft
   - name: Patrick König
     orcid: 0000-0002-8948-6793
-    affiliation: 3
+    affiliation: 3        
+    role: Writing – original draft
   - name: Cyril Pommier
     orcid: 0000-0002-9040-8733
     affiliation: 2,11
+    role: Writing – original draft
   - name: Carissa Bleker
     orcid: 0000-0003-1617-7145
-    affiliation: 4    
+    affiliation: 4
+    role: Writing – original draft
   - name: Pedro M. Barros
     orcid: 0000-0001-5626-0619
-    affiliation: 5 
+    affiliation: 5
+    role: Writing – original draft
   - name: Filippo Bergeretti
     orcid: 0000-0002-6863-5577
-    affiliation: 5 
+    affiliation: 5
+    role: Writing – original draft
   - name: Ana Usié
     orcid: 0000-0002-3364-9434
     affiliation: 6,7
+    role: Writing – original draft
   - name: Daniel Arend
     affiliation: 3
     orcid: 0000-0002-2455-5938
+    role: Writing – original draft
   - name: Marco Brandizi
     orcid: 0000-0002-5427-2496
     affiliation: 8
+    role: Writing – original draft
   - name: Daniel Martini
     orcid: 0000-0002-6953-4524
     affiliaton: 9
+    role: Writing – original draft
   - name: Jonas Grieb
     orcid: 0000-0002-8876-1722
     affiliaton: 10
+    role: Writing – original draft
   - name: Nils Reinosch
     affiliaton: 9
+    role: Writing – original draft
   - name: Jascha Jung
     affiliation: 9
+    role: Writing – original draft
     
 affiliations:
   - name: ZB MED - Information Centre for Life Sciences
@@ -145,7 +158,8 @@ Defining a subclass instead, that inherits all properties of its superclass(es) 
 	@prefix schema: <https://schema.org/> . 
 
 	<example_study> a bioschemas:Study .
-	<example_crop_source> a agri:FieldTrialMaterialSource, schema:BioChemEntity;
+	<example_crop_source> a agri:FieldTrialMaterialSource, 
+    schema:BioChemEntity;
 		bioschemas:taxonomicRange <http://aims.fao.org/aos/agrovoc/c_7951>;
 		schema:name "Triticum aestivum";
         bioschemas:exampleProperty_variety
