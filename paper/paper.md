@@ -114,7 +114,8 @@ An example study on wheat could be modelled the follwing way:
 	@prefix schema: <https://schema.org/> . 
 
 	<example_study> a bioschemas:Study .
-	<example_crop_source> a agri:FieldTrialMaterialSource, schema:BioChemEntity;
+	<example_crop_source> a agri:FieldTrialMaterialSource,
+        schema:BioChemEntity;
 		bioschemas:taxonomicRange <http://aims.fao.org/aos/agrovoc/c_7951>;
 		schema:name "Triticum aestivum";
 		schema:subjectOf <example_study>;
@@ -128,8 +129,10 @@ A different approach originates from a ["Dataset"](https://schema.org/Dataset), 
 	<example_dataset> a schema:Dataset ;
 	schema:about [
 		a bioschemas:BioChemEntity ;
-		dct:conformsTo <https://bioschemas.org/profiles/example_Crop/0.1-TO-BE-CREATED> ;
-		bioschemas:taxonomicRange <http://aims.fao.org/aos/agrovoc/c_890> ;
+		dct:conformsTo 
+        <https://bioschemas.org/profiles/example_Crop/0.1-TO-BE-CREATED> ;
+		bioschemas:taxonomicRange 
+        <http://aims.fao.org/aos/agrovoc/c_890> ;
         schema:name "Beta vulgaris"
 		] .
 
@@ -145,7 +148,8 @@ Defining a subclass instead, that inherits all properties of its superclass(es) 
 	<example_crop_source> a agri:FieldTrialMaterialSource, schema:BioChemEntity;
 		bioschemas:taxonomicRange <http://aims.fao.org/aos/agrovoc/c_7951>;
 		schema:name "Triticum aestivum";
-        bioschemas:exampleProperty_variety <https://fsp.ucdavis.edu/seed-catalog/wheat-varieties/Yecora-Rojo> ;
+        bioschemas:exampleProperty_variety
+        <https://fsp.ucdavis.edu/seed-catalog/wheat-varieties/Yecora-Rojo> ;
 		schema:subjectOf <example_study>;
 		schema:identifier <example_identifier> .  
 
@@ -158,13 +162,13 @@ Further results and material can be found in the subprojects Github repository, 
 ### Introduction
 
 The MIAPPE Wizard is a tool that should make MIAPPE-compliant metadata annotation of plant phenotyping experiments as easy as possible. It should hide the complexity of the ISA framework, ontology selection and annotation and mapping of attributes of the MIAPPE checklist to ISA entities for non-expert users.
-The development of the MIAPPE Wizard began with the first Biohackathon Germany in 2022 [@citeAsRelated:denbi_biohack_2022].
+The development of the MIAPPE Wizard began with the first Biohackathon Germany in 2022 [@citesAsAuthority:denbi_biohack_2022].
 
 ### Results
 
 The focus at this year's de.NBI BioHackathon was to enhance and extend the features available in the MIAPPE Wizard. Previously, the Wizard was only capable of creating ISA JSON and ISA Tab formatted archives, with a significant amount of MIAPPE specific metadata missing. This year, the group focused on implementing a) the MIAPPE checklist b) the management of protocols and c) the upload of material and sample sheets. 
 
-In addition to supporting ISA Tab and ISA JSON, the MIAPPE Wizard was also enhanced to create "Annotated Research Contexts" (ARC) by using the [ARCtrl Javascript library](https://github.com/nfdi4plants/ARCtrl) provided by the NFDI DataPLANT consortium. The ARC can be downloaded as a zip archive and transferred from the local machine to PLANTdataHUB through `git` [@citeAsRelated:plantdatahub]. The direct transfer of ARC archives to a PLANTdataHUB instance is still in development.
+In addition to supporting ISA Tab and ISA JSON, the MIAPPE Wizard was also enhanced to create "Annotated Research Contexts" (ARC) by using the [ARCtrl Javascript library](https://github.com/nfdi4plants/ARCtrl) provided by the NFDI DataPLANT consortium. The ARC can be downloaded as a zip archive and transferred from the local machine to PLANTdataHUB through `git` [@citesAsAuthority:plantdatahub]. The direct transfer of ARC archives to a PLANTdataHUB instance is still in development.
 
 The graphical user interface was improved by adding a progress bar and updating the color scheme and logo.
 
@@ -202,6 +206,6 @@ In frame of this project the existing web server of e!DAL-PGP was extended to pr
 
 ## Acknowledgements
 
-This work was performed during the de.NBI BioHackathon Germany 2023 organized by ELIXIR Germany in December 2023. This work was funded by ELIXIR, the research infrastructure for life-science data; by the Federal Government of Germany and the county of North Rhine-Westphalia (de.NBI - the German Network for Bioinformatics Infrastructure); by the DFG in frame of the FAIRagro (www.fairagro.net, project number 501899475), NFDI4BioDiversity (www.nfdi4biodiversity.org, project number 442032008) and DataPLANT (https://www.nfdi4plants.de/, project number 442077441); consortia of the NFDI; by the Slovenian Research and Innovation Agency (https://projects.nib.si/translate/, project number Z4-50146); and by Fundação para a Ciência e a Tecnologia (Portugal) through the R&D Unit "GREEN-IT - Bioresources for Sustainability" (DOI: 10.54499/UIDB/04551/2020 and DOI: 10.54499/UIDP/04551/2020) and LS4FUTURE Associated Laboratory (DOI: 10.54499/LA/P/0087/2020). 
+This work was performed during the de.NBI BioHackathon Germany 2023 organized by ELIXIR Germany in December 2023. This work was funded by ELIXIR, the research infrastructure for life-science data; by the Federal Government of Germany and the county of North Rhine-Westphalia (de.NBI - the German Network for Bioinformatics Infrastructure); by the DFG in frame of the FAIRagro (https://www.fairagro.net, project number 501899475), NFDI4BioDiversity (https://www.nfdi4biodiversity.org, project number 442032008) and DataPLANT (https://www.nfdi4plants.de/, project number 442077441); consortia of the NFDI; by the Slovenian Research and Innovation Agency (https://projects.nib.si/translate/, project number Z4-50146); and by Fundação para a Ciência e a Tecnologia (Portugal) through the R&D Unit "GREEN-IT - Bioresources for Sustainability" (DOI: 10.54499/UIDB/04551/2020 and DOI: 10.54499/UIDP/04551/2020) and LS4FUTURE Associated Laboratory (DOI: 10.54499/LA/P/0087/2020). 
 
 ## References
