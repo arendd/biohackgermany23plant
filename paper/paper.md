@@ -38,17 +38,37 @@ authors:
     affiliation: 3
     orcid: 0000-0002-2455-5938
     role: Writing – original draft
+  - name: Sebastian Beier
+    affiliation: 12
+    orcid: 0000-0002-2177-8781
+    role: Writing - original draft
   - name: Marco Brandizi
     orcid: 0000-0002-5427-2496
     affiliation: 8
+    role: Writing – original draft
+  - name: Dominik Brilhaus
+    affiliation: 13
+    orcid: 0000-0001-9021-3197
+    role: Writing - original draft
+  - name: Manuel Feser
+    affiliation: 3
+    orcid: 0000-0001-6546-1818
+    role: Writing – original draft
+  - name: Jonas Grieb
+    orcid: 0000-0002-8876-1722
+    affiliaton: 10
     role: Writing – original draft
   - name: Daniel Martini
     orcid: 0000-0002-6953-4524
     affiliaton: 9
     role: Writing – original draft
-  - name: Jonas Grieb
-    orcid: 0000-0002-8876-1722
-    affiliaton: 10
+  - name: Cristina Martins Rodrigues
+    affiliation: 15
+    orcid: 0000-0002-4849-1537
+    role: Writing - original draft
+  - name: Dennis Psaroudakis
+    orcid: 0000-0002-7521-798X
+    affiliaton: 3
     role: Writing – original draft
   - name: Nils Reinosch
     affiliaton: 9
@@ -56,6 +76,11 @@ authors:
   - name: Jascha Jung
     affiliation: 9
     role: Writing – original draft
+  - name: Heinrich Lukas Weil
+    affiliation: 14
+    orcid: 0000-0003-1945-6342
+    role: Writing - original draft
+    
     
 affiliations:
   - name: ZB MED - Information Centre for Life Sciences
@@ -80,6 +105,14 @@ affiliations:
     index: 10
   - name: Université Paris-Saclay, INRAE, BioinfOmics, Plant Bioinformatics Facility, Versailles, France
     index: 11
+  - name: Forschungszentrum Jülich GmbH
+    index: 12
+  - name: Cluster of Excellence on Plant Sciences (CEPLAS), Faculty of Mathematics and Natural Science, Heinrich Heine University, Düsseldorf, Germany
+    index: 13
+  - name: RPTU Kaiserslautern-Landau, Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau, Technische Universität Kaiserslautern
+    index: 14
+  - name: Albert-Ludwigs-Universität Freiburg
+    index: 15
 date: 18 december 2023
 cito-bibliography: paper.bib
 event: BH23DE
@@ -99,28 +132,32 @@ authors_short: Gabriel Schneider \emph{et al.}
 As part of the de.NBI BioHackathon 2023, we here report about our progress on increasing FAIR-compliance in agrosystem sciences and plant phenomics. Through the collaborative efforts of the agrosystem and plant sciences communities, research data are available through various data repositories and infrastructures. To foster these developments and increase the value for the communities, enabling FAIR-compliance for scientific datasets is one top priority strategic aim. Due to the heterogeneity of the sub-domains and their requirements, we addressed three challenges with direct relation to specific FAIR principles: Increasing findability of digital agrosystem resources by extending Schema.org, Enabling easy creation of MIAPPE-compliant ISA metadata for Plant Phenotyping Experiments, and Increasing Plant Data Accessibility and Collaboration with FAIDARE. 
 
 ## Increasing findability of digital agrosystem resources by extending Schema.org
+
 ### Introduction
-Research Data Infrastructures (RDIs) in the agrosystem domain established services and published research data of their communities for years. Each infrastructure is tailored to its users needs, also concerning its metadata, leading to a very heterogeneous landscape. To increase the findability of their content via search engines, RDIs can expose the metadata of resources as markup via Schema.org. 
+
+Research Data Infrastructures (RDIs) in the agrosystem domain established services and published research data of their communities for years. Each infrastructure is tailored to its users' needs, also concerning its metadata, leading to a very heterogeneous landscape. To increase the findability of their content via search engines, RDIs can expose the metadata of resources as markup via Schema.org. 
 In the context of [FAIRagro](https://fairagro.net/), the German National Research Data Infrastructure for the agrosystem domain, several RDIs already do so: For each landing page of a dataset, a [JSON-LD](https://json-ld.org/) based resource is created, that contains part of the metadata information, using Schema.org types and properties. This annotation is then consumed by search engines to present enriched search results to users. As Schema.org follows a generic approach, its core schema doesn't suffice in describing all entities relevant for agrosystem researchers with the required level of detail.
 Therefore this hackathon subproject evaluated Schema.org, its extension [Bioschemas](https://bioschemas.org/) and the [Agri-schemas](https://github.com/Rothamsted/agri-schemas) project in regards to modeling metadata of datasets relevant to [FAIRagro](https://fairagro.net/) use cases. 
 
 Following the [FAIR principles](https://www.go-fair.org/fair-principles/) and its ideas on reusability, the approach was to identifiy which kinds of entities relevant to the agrosystems domain, could also be modelled with already available types and properties and where gaps are, that could be closed in the future with an extension of mentioned schemas.
 
 ### Tasks
-During the hackathon the project group analysed different published datasets, relevant to a crop modeling use case in FAIRagro. For each dataset the group identified the entities described in the metadata, directly provided via the RDI that published the datasets, as well as the contents of the datafiles themselves. 
+
+During the hackathon the project group analysed different published datasets, relevant to a crop modeling use-case in FAIRagro. For each dataset the group identified the entities described in the metadata, directly provided via the RDI that published the datasets, as well as the contents of the datafiles themselves. 
 As the provision of Schema.org markup in our projects context is about increasing the findability of digital resources, we focussed on entities, that agrosystem scientists will most likely search for. Soil, crop, fertilizers and management actions were identified as central entities for searches, based on feedback by hackathon participants and discussions of the project group.
 
-For crop and soil, the project group used types and properties of Schema.org / Bioschemas / Agri-schemas to model the metadata information of the example datasets and their  included entities explicitly. For technical representation of modelling the information the project group used either [Turtle](https://www.w3.org/TR/turtle/) as a RDF serialization or [JSON-LD](https://json-ld.org/), one of the formats Schema.org uses.
+For crop and soil, the project group used types and properties of Schema.org / Bioschemas / Agri-schemas to model the metadata information of the example datasets and their included entities explicitly. For technical representation of modelling the information the project group used either [Turtle](https://www.w3.org/TR/turtle/) as an RDF serialization or [JSON-LD](https://json-ld.org/), one of the formats Schema.org uses.
 
-As Schema.org builds the foundation for metadata description in [RO-Crates](https://www.researchobject.org/ro-crate/), we converted one of the analysed datasets to a RO-Crate, to demonstrate how RDIs could enrich their datasets to achieve increased interoperability towards [FAIR Digital Objects](https://fairdo.org/1316-2/). 
+As Schema.org builds the foundation for metadata description in [RO-Crates](https://www.researchobject.org/ro-crate/), we converted one of the analysed datasets to an RO-Crate, to demonstrate how RDIs could enrich their datasets to achieve increased interoperability towards [FAIR Digital Objects](https://fairdo.org/1316-2/). 
 In parallel to the modelling we analysed how RDIs currently use Schema.org and how they could improve their usage. To demonstrate the benefits of such an optimisation, we outlined new search queries that users would be able to execute after implementation.
 
 ### Results
-A central result of the hackathon work is the realisation that many of the requirements of the analysed use case can be satisfied by contributing to already existing communities, such as Bioschemas. By following its community based approach of extension, the agrosystem domain can work on establishing the concepts it needs, while embedding them in a broader context, increasing interoperability. 
+
+A central result of the hackathon work is the realisation that many of the requirements of the analysed use-case can be satisfied by contributing to already existing communities, such as Bioschemas. By following its community based approach of extension, the agrosystem domain can work on establishing the concepts it needs, while embedding them in a broader context, increasing interoperability. 
 During the modelling of example dataset metadata with already available types and properties of Schema.org / Bioschemas / Agri-schemas, we identified multiple approaches, that are feasible, depending on requirements of specific use cases.
 
 Crop is one of the central entities, found in a majority of the analysed datasets. It describes a type of plant, that is in some way related to a dataset. It can be expressed using the type "FieldTrialMaterialSource" from Agri-schemas, which is a proposition of a subclass of Bioschemas ["BioChemEntity"](https://bioschemas.org/BioChemEntity).  The crop is described with a ["taxonomicRange"](https://schema.org/taxonomicRange), which is a property of "BioChemEntity". Furthermore it relies on the Schema.org core properties ["name"](https://schema.org/name) and ["subjectOf"](https://schema.org/subjectOf) to link it to a ["Study"](https://bioschemas.org/Study). Implementing this approach would mean the development of a new subclass. Using the term "FieldTrialMaterialSource", which has its source in the [MIAPPE](https://www.miappe.org/) standard, would increase the understanding of researchers familiar with MIAPPE terminology.
-An example study on wheat could be modelled the follwing way:
+An example study on wheat (*Triticum aestivum*) could be modelled the follwing way:
 
     @prefix bioschemas: <https://bioschemas.org/> . 
 	@prefix agri: <https://github.com/Rothamsted/agri-schemas/> . 
