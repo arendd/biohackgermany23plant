@@ -83,9 +83,9 @@ affiliations:
 date: 18 december 2023
 cito-bibliography: paper.bib
 event: BH23DE
-biohackathon_name: "BioHackathon Germany 2023"
-biohackathon_url:   "https://biohackathon-europe.org/"
-biohackathon_location: "Bielefeld, Germany, 2023"
+biohackathon_name: "2th BioHackathon Germany"
+biohackathon_url: "https://www.denbi.de/de-nbi-events/1547-biohackathon-germany-2"
+biohackathon_location: "Bielefeld, Germany"
 group: Project 9
 # URL to project git repo --- should contain the actual paper.md:
 git_url: https://github.com/biohackrxiv/publication-template
