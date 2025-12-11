@@ -56,7 +56,7 @@ authors:
     role: Writing – original draft
   - name: Jonas Grieb
     orcid: 0000-0002-8876-1722
-    affiliaton:10;
+    affiliaton: 10
     role: Writing – original draft
   - name: Daniel Martini
     orcid: 0000-0002-6953-4524
@@ -102,7 +102,7 @@ affiliations:
   - name: Kuratorium für Technik und Bauwesen in der Landwirtschaft e.V. (KTBL)
     index: 9
   - name: Senckenberg Society for Nature Research
-    index:10;
+    index: 10
   - name: Université Paris-Saclay, INRAE, BioinfOmics, Plant Bioinformatics Facility, Versailles, France
     index: 11
   - name: Forschungszentrum Jülich GmbH
