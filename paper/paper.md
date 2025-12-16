@@ -9,11 +9,9 @@ authors:
   - name: Gabriel Schneider
     orcid: 0000-0001-6573-3115
     affiliation: 1
-    role: Writing – original draft
   - name: Patrick König
     orcid: 0000-0002-8948-6793
     affiliation: 3        
-    role: Writing – original draft
   - name: Cyril Pommier
     orcid: 0000-0002-9040-8733
     affiliation: 2,11
