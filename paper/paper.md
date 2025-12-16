@@ -102,34 +102,64 @@ authors:
 affiliations:
   - name: ZB MED - Information Centre for Life Sciences
     index: 1
+    ror:
+    
   - name: Université Paris-Saclay, INRAE, URGI, Versailles, France
     index: 2
+    ror:
+        
   - name: Leibniz Institute for Plant Genetics and Crop Plant Research (IPK) Gatersleben, Germany
     index: 3
+    ror: 
+    
   - name: Department of Biotechnology and Systems Biology, National Institute of Biology, Ljubljana, Slovenia #Večna pot 121, 1000 
-    index: 4    
+    index: 4
+    ror: 
+    
   - name: Instituto de Tecnologia Química e Biológica António Xavier, Universidade Nova de Lisboa  (ITQB NOVA), Oeiras, Portugal
     index: 5
+    ror: 
+    
   - name: Centro de Biotecnologia Agrícola e Agro-alimentar do Alentejo (CEBAL), Beja, Portugal
     index: 6
+    ror: 
+    
   - name: MED–Instituto Mediterrâneo para a Agricultura, Ambiente e Desenvolvimento & CHANGE–Global Change and Sustainability Institute, Évora, Portugal
     index: 7
+    ror: 
+    
   - name: Rothamstead Research
     index: 8
+    ror: 
+    
   - name: Kuratorium für Technik und Bauwesen in der Landwirtschaft e.V. (KTBL)
     index: 9
+    ror: 
+    
   - name: Senckenberg Society for Nature Research
     index: 10
+    ror: 
+    
   - name: Université Paris-Saclay, INRAE, BioinfOmics, Plant Bioinformatics Facility, Versailles, France
     index: 11
+    ror: 
+    
   - name: Forschungszentrum Jülich GmbH
     index: 12
+    ror: 
+    
   - name: Cluster of Excellence on Plant Sciences (CEPLAS), Faculty of Mathematics and Natural Science, Heinrich Heine University, Düsseldorf, Germany
     index: 13
+    ror: 
+    
   - name: RPTU Kaiserslautern-Landau, Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau, Technische Universität Kaiserslautern
     index: 14
+    ror: 
+    
   - name: Albert-Ludwigs-Universität Freiburg
     index: 15
+    ror: 
+    
 date: 18 december 2023
 cito-bibliography: paper.bib
 event: BH23DE
