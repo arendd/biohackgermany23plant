@@ -57,6 +57,7 @@ authors:
   - name: Jonas Grieb
     orcid: 0000-0002-8876-1722
     affiliaton: 10
+    role: Writing – original draft
   - name: Daniel Martini
     orcid: 0000-0002-6953-4524
     affiliaton: 9
@@ -79,7 +80,6 @@ authors:
     affiliation: 14
     orcid: 0000-0003-1945-6342
     role: Writing - original draft
-    
     
 affiliations:
   - name: ZB MED - Information Centre for Life Sciences
