@@ -73,7 +73,7 @@ authors:
     
   - name: Daniel Martini
     orcid: 0000-0002-6953-4524
-    affiliaton: 9
+    affiliation: 9
     role: Writing – original draft
     
   - name: Cristina Martins Rodrigues
