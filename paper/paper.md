@@ -68,7 +68,7 @@ authors:
     
   - name: Jonas Grieb
     orcid: 0000-0002-8876-1722
-    affiliaton: {10}
+    affiliation: 10
     role: Writing – original draft
     
   - name: Daniel Martini
@@ -83,11 +83,11 @@ authors:
     
   - name: Dennis Psaroudakis
     orcid: 0000-0002-7521-798X
-    affiliaton: 3
+    affiliation: 3
     role: Writing – original draft
     
   - name: Nils Reinosch
-    affiliaton: 9
+    affiliation: 9
     role: Writing – original draft
     
   - name: Jascha Jung
