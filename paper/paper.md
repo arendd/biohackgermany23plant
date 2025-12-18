@@ -68,7 +68,7 @@ authors:
     
   - name: Jonas Grieb
     orcid: 0000-0002-8876-1722
-    affiliaton: 10
+    affiliaton: {10}
     role: Writing – original draft
     
   - name: Daniel Martini
