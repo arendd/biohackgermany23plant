@@ -168,7 +168,7 @@ biohackathon_url: "https://www.denbi.de/de-nbi-events/1547-biohackathon-germany-
 biohackathon_location: "Bielefeld, Germany"
 group: Project 9
 # URL to project git repo --- should contain the actual paper.md:
-git_url: https://github.com/biohackrxiv/publication-template
+git_url: https://github.com/arendd/biohackgermany23plant
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
 authors_short: Gabriel Schneider \emph{et al.}
